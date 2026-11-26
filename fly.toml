@@ -1,5 +1,5 @@
 app = "tbc-ggy9-q"
-primary_region = "bom"
+primary_region = "sin"
 
 [build]
   image = "ghcr.io/crazycacti/torbox-companion:latest"
