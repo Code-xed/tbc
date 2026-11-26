@@ -1,0 +1,17 @@
+app = "torbox-companion"
+primary_region = "bom"
+
+[build]
+  image = "ghcr.io/crazycacti/torbox-companion:latest"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+
+[mounts]
+  source = "torbox_data"
+  destination = "/app/data"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
