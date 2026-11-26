@@ -1,4 +1,4 @@
-app = "torbox-companion"
+app = "tbc-ggy9-q"
 primary_region = "bom"
 
 [build]
@@ -7,6 +7,8 @@ primary_region = "bom"
 [http_service]
   internal_port = 3000
   force_https = true
+  auto_start_machines = true
+  min_machines_running = 0
 
 [mounts]
   source = "torbox_data"
@@ -15,3 +17,9 @@ primary_region = "bom"
 [[vm]]
   size = "shared-cpu-1x"
   memory = "512mb"
+
+[env]
+  TORBOX_MAX_RULES_PER_USER = "100"
+  TORBOX_LOG_RETENTION_DAYS = "90"
+  TORBOX_RULE_EXECUTION_TIMEOUT_SECS = "130"
+  TORBOX_PROXY_RATE_LIMIT = "300"
